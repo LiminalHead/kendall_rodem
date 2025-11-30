@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pane {
+  border: 0.5rem solid #c0c0c0;
+  outline: 0.1rem solid black;
+  font-size: 2rem;
+  width: 50rem;
+}
+
+.pane__content {
+  outline: 0.1rem solid black;
+}
+
+.pane__header {
+  background-color: #c0c0c0;
+  min-height: 1rem;
+  outline: 0.1rem solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pane__title {
+  border-top: 0.1rem solid darkgray;
+  flex-grow: 1;
+  text-align: center;
+  border-bottom: 0.1rem solid gray;
+}
+
+.pane__body {
+  padding-right: 1rem;
+  height: 40rem;
+  overflow: scroll;
+  scrollbar-width: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+::-webkit-scrollbar{
+  width: 1rem;;
+}
+
+::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: #c0c0c0;
+}
+
+.pane__button {
+  padding: 0.1rem 1rem;
+  border-radius: 0;
+  background-color: #c0c0c0;
+}
+
+.pane__button:active {
+  background-color: gray;
+  border: inset 2px;
+}
+
+.pane__button:first-child {
+  border-bottom: 0.1rem solid gray;
+  border-left: 0.1rem solid darkgray;
+  border-top: 0.1rem solid darkgray;
+}
+
+.pane__button:last-child {
+  border-bottom: 0.1rem solid gray;
+  border-right: 0.1rem solid darkgray;
+  border-top: 0.1rem solid darkgray;
+}
