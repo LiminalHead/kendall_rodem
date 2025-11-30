@@ -9,13 +9,64 @@ body {
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
+  background-image: url('/doom_skybox.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pane {
-  border: 0.5rem solid #c0c0c0;
-  outline: 0.1rem solid black;
   font-size: 2rem;
   width: 50rem;
+  transform-origin: top left;
+  animation: drawIn 0.5s ease forwards;
+}
+
+@keyframes drawIn {
+  0% {
+    border: 0.5rem solid white;
+    outline: 0.1rem solid white;
+    transform: scaleY(0) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+    border: 0.5rem solid #c0c0c0;
+    outline: 0.1rem solid black;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.typewriter {
+  width: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #c0c0c0;
+  animation: typing 2s steps(30, end) forwards, blink-cursor 0.7s step-end infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    display: inline;
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  0%, 100% {
+    border-color: #c0c0c0;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .pane__content {
@@ -24,7 +75,6 @@ body {
 
 .pane__header {
   background-color: #c0c0c0;
-  min-height: 1rem;
   outline: 0.1rem solid black;
   display: flex;
   justify-content: space-between;
