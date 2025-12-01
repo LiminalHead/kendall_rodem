@@ -40,6 +40,12 @@ body {
   display: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .typewriter {
   width: 0;
   display: inline-block;
@@ -55,7 +61,6 @@ body {
     width: 0;
   }
   to {
-    display: inline;
     width: 100%;
   }
 }
@@ -89,7 +94,7 @@ body {
 
 .pane__body {
   padding-right: 1rem;
-  height: 40rem;
+  height: 42rem;
   overflow: scroll;
   scrollbar-width: 2rem;
   color: white;
@@ -134,4 +139,17 @@ body {
   border-bottom: 0.1rem solid gray;
   border-right: 0.1rem solid darkgray;
   border-top: 0.1rem solid darkgray;
+}
+
+.attachment {
+  background-color: rgba(0, 0, 255, 0.726);
+  position: absolute;
+  left: 47rem;
+  top: 25rem;
+
+}
+
+.attachment .pane__body {
+  height: 6rem;
+  padding: 1rem;
 }
